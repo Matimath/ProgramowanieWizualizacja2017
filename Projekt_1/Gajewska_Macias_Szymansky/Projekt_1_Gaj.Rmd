@@ -132,7 +132,7 @@ show_reasons_levels<-function(data,args){
 show_reasons_levels2<-function(data,args){ #<-zupełnie zautomatyzowane pokazywanie leveli, ale zajmuje więcej miejsca w raporcie
   i<-0
   fac<-factor()
-  fac2<-factor()
+  
   m<-length(args[['reasons']])
   while(i< m ){
     i<-i+1
