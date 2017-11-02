@@ -129,6 +129,24 @@ show_reasons_levels<-function(data,args){
   cat('Reason 1 levels:',k,'\n','Reason 2 levels:', w)
 }
 
+show_reasons_levels2<-function(data,args){ #<-zupełnie zautomatyzowane pokazywanie leveli, ale zajmuje więcej miejsca w raporcie
+  i<-0
+  fac<-factor()
+  fac2<-factor()
+  m<-length(args[['reasons']])
+  while(i< m ){
+    i<-i+1
+    k<-data[args[['reasons']][i]]
+    l<-unique(k)
+    l<-as.data.frame(l)
+    r<-na.omit(l)
+    fac<-c(r)
+    print(fac)
+    
+  }
+  
+}
+
 title_page<-function(){
  
   plot(1:20, 1:20, type="n", xlim=c(0, 7*254), ylim=c(0, 9.5*254), xlab="", ylab="", lwd=2, xaxt="n", yaxt="n");
